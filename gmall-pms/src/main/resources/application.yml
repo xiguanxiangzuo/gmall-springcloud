@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.52.101:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.52.101:3306/gmall_pms
+    username: root
+    password: root
+  redis:
+    host: 192.168.52.101
+    pool: 6379
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath:mapper/pms/**/*.xml
+
